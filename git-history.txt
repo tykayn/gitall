@@ -1,0 +1,1 @@
+Fri Jun 5 14:55:06 2015 +0200 , Baptiste Lemoine, e23accf, hopla c'est parti pour loguer du git
