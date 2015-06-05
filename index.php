@@ -3,6 +3,9 @@
  * lister les commits de git
  */
 // config
+//ini_set("display_errors", "1");
+//error_reporting(E_ALL);
+include 'error.php';
 $file = __DIR__ . '/git-history.txt';
 
 // ouvrir le fichier texte
@@ -29,7 +32,7 @@ foreach ($lignes as $l) {
 
 
     $commit = [
-        'date' => $date,
+        'date' => $timestamp,
         'auth' => $auth,
         'sha' => $sha,
         'msg' => $msg,
@@ -38,16 +41,35 @@ foreach ($lignes as $l) {
 }
 // préparer l'affichage
 $display = '';
+
+// init des tranches
+$oldAn = null;
+$an = date('Y');
+$oldMois = null;
+$mois = date('m');
+$jour = date('d');
+$heure = date('H');
+
 foreach ($byDate as $d) {
 
+    $timestamp = $d['date'];
     //test de tranche différente
 //    var_dump($timestamp);
-//    $an = date('Y', $timestamp);
-//    $mois = date('m', $timestamp);
+    $an = date('Y', $timestamp);
+    $mois = date('m', $timestamp);
 //    $jour = date('d', $timestamp);
 //    $heure = date('H', $timestamp);
 
-    $display .= '<br/> '.$d[msg];
+    if($an != $oldAn){
+        $display .= '<h2>'.$an.'</h2>';
+    }
+    if($mois != $oldMois){
+        $display .= '<h3>'.$mois.'</h3>';
+    }
+
+    $display .= '<br/> '.date('Y m d H:i:s',$timestamp).' '.$d['msg'];
+    $oldAn = $an;
+    $oldMois = $mois;
 }
 
 
