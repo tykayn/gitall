@@ -8,7 +8,8 @@
 //$file = __DIR__ . '/gitall.sh';
 //$f = fopen($file, "r");
 //$command = file_get_contents($file);
-//shell_exec($commande) || die('erreur avec le script shell');
+shell_exec('git log --pretty=format:"%cd / %cn/ %h/ %s;" --full-history > git-history.txt');
+//die('erreur avec le script shell');
 
 $file = __DIR__ . '/git-history.txt';
 $joursFr = [
@@ -88,10 +89,10 @@ foreach ($byDate as $d) {
         $display .= '<hr/><h3>' . $moisFr[$mois] . '</h3>';
     }
     if ($semaine != $oldSemaine) {
-        $display .= '<small class="row-fluid">semaine '. $semaine. ' </small>';
+        $display .= '<small class="row-fluid">semaine ' . $semaine . ' </small>';
     }
     if ($jour != $oldJour) {
-        $display .= '<h4>'. $joursFr[date('w', $timestamp) - 1] . ' ' .$jour. ' </h4>';
+        $display .= '<h4>' . $joursFr[date('w', $timestamp) - 1] . ' ' . $jour . ' </h4>';
     }
     if ($heure != $oldHeure) {
         $display .= '<h5>' . $heure . 'h</h5>';
@@ -117,21 +118,20 @@ $ts2 = $lastDate['date'];
 
 $datediff = $ts1 - $ts2;
 
-$secPerDay = 3600 * 24 ;
+$secPerDay = 3600 * 24;
 $datediff = $datediff / $secPerDay;
-if($datediff<2){
+if ($datediff < 2) {
     $datediff = round($datediff * 24, 1) . ' h';
-}
-else{
+} else {
     $datediff = $datediff . ' jours';
 }
 echo '<br/>';
-var_dump($datediff);
+//var_dump($datediff);
 // output html
 $rep = '<h1>Git log all</h1>';
-$rep .= 'Projet commencé il y a '.$datediff;
+$rep .= 'Projet commencé il y a ' . $datediff;
 $rep .= '<br/>' . $display;
-$rep .= '<hr/>' . $content;
+//$rep .= '<hr/>' . $content;
 ?>
 
 <html>
@@ -144,6 +144,22 @@ $rep .= '<hr/>' . $content;
 <div class="container">
 
     <?php echo $rep; ?>
+<h1>Fonctionnement</h1>
+    <div class="row-fluid">
+        <div class="col-lg-5">
+            cette page php permet de vous fournir un log complet par tranches de votre historique git.
+            copiez l'index.php dans votre dossier de projet initialisé avec git.
+            accédez à la page php, et hop miracle voici un résumé html daté de tous les commits.
+            <hr/>
+            <a href="http://artlemoine.com" class="btn btn-primary">portfolio</a>
+            <a href="http://github.com/tykayn" class="btn btn-primary">github tykayn</a>
+        </div>
+        <div class="col-lg-7">
+
+        </div>
+    </div>
+
+
 </div>
 </body>
 </html>
