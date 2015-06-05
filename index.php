@@ -110,10 +110,26 @@ foreach ($byDate as $d) {
 
 
 // calcul du début
+$firstDate = array_shift($byDate);
+$lastDate = array_pop($byDate);
+$ts1 = $firstDate['date'];
+$ts2 = $lastDate['date'];
 
+$datediff = $ts1 - $ts2;
+
+$secPerDay = 3600 * 24 ;
+$datediff = $datediff / $secPerDay;
+if($datediff<2){
+    $datediff = round($datediff * 24, 1) . ' h';
+}
+else{
+    $datediff = $datediff . ' jours';
+}
+echo '<br/>';
+var_dump($datediff);
 // output html
 $rep = '<h1>Git log all</h1>';
-$rep .= 'Projet commencé il y a x jours';
+$rep .= 'Projet commencé il y a '.$datediff;
 $rep .= '<br/>' . $display;
 $rep .= '<hr/>' . $content;
 ?>
