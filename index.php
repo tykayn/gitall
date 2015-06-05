@@ -5,9 +5,10 @@
 // config
 //ini_set("display_errors", "1");
 //error_reporting(E_ALL);
-//$file = __DIR__ . '/gitall.sh';
-//$f = fopen($file, "r");
-//$command = file_get_contents($file);
+$file = __DIR__ . '/gitall.sh';
+$f = fopen($file, "r");
+$command = file_get_contents($f);
+var_dump($command);
 shell_exec('git log --pretty=format:"%cd / %cn/ %h/ %s;" --full-history > git-history.txt');
 //die('erreur avec le script shell');
 
@@ -22,10 +23,6 @@ $moisFr = [
 // ouvrir le fichier texte
 $f = fopen($file, "r");
 $content = file_get_contents($file);
-
-//var_dump($file);
-//var_dump($content);
-//var_dump(count($lignes));
 
 // couper par ligne
 $lignes = explode(';', $content);
@@ -53,6 +50,8 @@ foreach ($lignes as $l) {
     ];
     $byDate[$timestamp] = $commit;
 }
+
+$countcommits = count($byDate);
 // préparer l'affichage
 $display = '';
 
@@ -99,7 +98,7 @@ foreach ($byDate as $d) {
     }
 
     $display .= '<div class="row">
-<div class="col-lg-2">' . date('i:s', $timestamp) . '</div>
+<div class="col-lg-2 text-right">' . date('i:s', $timestamp) . '</div>
  <div class="col-lg-10">  ' . $d['msg'] . '</div>
  </div>';
     $oldAn = $an;
@@ -128,8 +127,8 @@ if ($datediff < 2) {
 echo '<br/>';
 //var_dump($datediff);
 // output html
-$rep = '<h1>Git log all</h1>';
-$rep .= 'Projet commencé il y a ' . $datediff;
+$rep = '';
+$rep .= 'Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits';
 $rep .= '<br/>' . $display;
 //$rep .= '<hr/>' . $content;
 ?>
@@ -142,14 +141,24 @@ $rep .= '<br/>' . $display;
 </head>
 <body>
 <div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1>Feuille de route</h1>
+        </div>
+        <div class="panel-body">
+            <?php echo $rep; ?>
+        </div>
+    </div>
 
-    <?php echo $rep; ?>
-<h1>Fonctionnement</h1>
+    <h1>Fonctionnement</h1>
+
     <div class="row-fluid">
         <div class="col-lg-5">
-            cette page php permet de vous fournir un log complet par tranches de votre historique git.
-            copiez l'index.php dans votre dossier de projet initialisé avec git.
-            accédez à la page php, et hop miracle voici un résumé html daté de tous les commits.
+            cette page php permet de vous fournir un log complet par tranches de votre historique git. copiez
+            l'index.php dans votre dossier de projet initialisé avec git. accédez à la page php, et hop miracle voici un
+            résumé html daté de tous les commits.
+            <hr/>
+            Git log all
             <hr/>
             <a href="http://artlemoine.com" class="btn btn-primary">portfolio</a>
             <a href="http://github.com/tykayn" class="btn btn-primary">github tykayn</a>
@@ -161,5 +170,22 @@ $rep .= '<br/>' . $display;
 
 
 </div>
+<style>
+    h2 {
+        margin-left: 0.5em;
+    }
+
+    h3 {
+        margin-left: 1em;
+    }
+
+    h4 {
+        margin-left: 3em;
+    }
+
+    h5 {
+        margin-left: 4em;
+    }
+</style>
 </body>
 </html>
