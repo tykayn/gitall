@@ -58,9 +58,13 @@ $display = '';
 // init des tranches
 $oldAn = null;
 $an = date('Y');
-$oldMois = null;
 
+$oldSemaine = null;
+$semaine = date('W');
+
+$oldMois = null;
 $mois = date('m');
+
 $oldJour = null;
 $jour = date('d');
 
@@ -75,12 +79,16 @@ foreach ($byDate as $d) {
     $mois = date('m', $timestamp);
     $jour = date('d', $timestamp);
     $heure = date('H', $timestamp);
+    $semaine = date('W', $timestamp);
 
     if ($an != $oldAn) {
         $display .= '<h2>' . $an . '</h2>';
     }
     if ($mois != $oldMois) {
-        $display .= '<h3>' . $moisFr[$mois] . '</h3>';
+        $display .= '<hr/><h3>' . $moisFr[$mois] . '</h3>';
+    }
+    if ($semaine != $oldSemaine) {
+        $display .= '<small class="row-fluid">semaine '. $semaine. ' </small>';
     }
     if ($jour != $oldJour) {
         $display .= '<h4>'. $joursFr[date('w', $timestamp) - 1] . ' ' .$jour. ' </h4>';
@@ -95,6 +103,7 @@ foreach ($byDate as $d) {
  </div>';
     $oldAn = $an;
     $oldMois = $mois;
+    $oldSemaine = $semaine;
     $oldHeure = $heure;
     $oldJour = $jour;
 }

@@ -38,15 +38,15 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83002836" vertical-offset="884" max-vertical-offset="1935">
-              <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.42634562" vertical-offset="1049" max-vertical-offset="2070">
+              <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
               <folding>
                 <element signature="e#6#42#0#PHP" expanded="true" />
-                <marker date="1433514085914" expanded="true" signature="2090:2208" placeholder="..." />
-                <marker date="1433514085914" expanded="true" signature="2475:2739" placeholder="..." />
-                <marker date="1433514085914" expanded="true" signature="2482:2660" placeholder="..." />
-                <marker date="1433514085914" expanded="true" signature="2667:2731" placeholder="..." />
-                <marker date="1433514085914" expanded="true" signature="2691:2723" placeholder="..." />
+                <marker date="1433514429934" expanded="true" signature="2298:2416" placeholder="..." />
+                <marker date="1433514429934" expanded="true" signature="2711:2975" placeholder="..." />
+                <marker date="1433514429934" expanded="true" signature="2718:2896" placeholder="..." />
+                <marker date="1433514429934" expanded="true" signature="2903:2967" placeholder="..." />
+                <marker date="1433514429934" expanded="true" signature="2927:2959" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file leaf-file-name="git-history.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git-history.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -232,11 +232,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#42#0#PHP" expanded="true" />
-            <marker date="1433514085914" expanded="true" signature="2090:2208" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2475:2739" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2482:2660" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2667:2731" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2691:2723" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2298:2416" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2711:2975" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2718:2896" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2903:2967" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2927:2959" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -251,8 +251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/git-history.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -267,15 +267,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83002836" vertical-offset="884" max-vertical-offset="1935">
-          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.42634562" vertical-offset="1049" max-vertical-offset="2070">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
           <folding>
             <element signature="e#6#42#0#PHP" expanded="true" />
-            <marker date="1433514085914" expanded="true" signature="2090:2208" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2475:2739" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2482:2660" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2667:2731" placeholder="..." />
-            <marker date="1433514085914" expanded="true" signature="2691:2723" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2298:2416" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2711:2975" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2718:2896" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2903:2967" placeholder="..." />
+            <marker date="1433514429934" expanded="true" signature="2927:2959" placeholder="..." />
           </folding>
         </state>
       </provider>
