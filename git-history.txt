@@ -1,1 +1,2 @@
-Fri Jun 5 14:55:06 2015 +0200 , Baptiste Lemoine, e23accf, hopla c'est parti pour loguer du git
+Fri Jun 5 15:03:58 2015 +0200 / Baptiste Lemoine/ cbcb41b/ start debug;
+Fri Jun 5 14:55:06 2015 +0200 / Baptiste Lemoine/ e23accf/ hopla c'est parti pour loguer du git;
