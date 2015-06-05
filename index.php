@@ -11,7 +11,7 @@
 //shell_exec($commande) || die('erreur avec le script shell');
 
 $file = __DIR__ . '/git-history.txt';
-$jours = [
+$joursFr = [
     "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim",
 ];
 $moisFr = [
@@ -61,7 +61,9 @@ $an = date('Y');
 $oldMois = null;
 
 $mois = date('m');
+$oldJour = null;
 $jour = date('d');
+
 $oldHeure = null;
 $heure = date('H');
 
@@ -69,10 +71,9 @@ foreach ($byDate as $d) {
 
     $timestamp = $d['date'];
     //test de tranche différente
-//    var_dump($timestamp);
     $an = date('Y', $timestamp);
     $mois = date('m', $timestamp);
-//    $jour = date('d', $timestamp);
+    $jour = date('d', $timestamp);
     $heure = date('H', $timestamp);
 
     if ($an != $oldAn) {
@@ -81,8 +82,11 @@ foreach ($byDate as $d) {
     if ($mois != $oldMois) {
         $display .= '<h3>' . $moisFr[$mois] . '</h3>';
     }
+    if ($jour != $oldJour) {
+        $display .= '<h4>'. $joursFr[date('w', $timestamp) - 1] . ' ' .$jour. ' </h4>';
+    }
     if ($heure != $oldHeure) {
-        $display .= '<h4>' . $heure . 'h</h4>';
+        $display .= '<h5>' . $heure . 'h</h5>';
     }
 
     $display .= '<div class="row">
@@ -92,6 +96,7 @@ foreach ($byDate as $d) {
     $oldAn = $an;
     $oldMois = $mois;
     $oldHeure = $heure;
+    $oldJour = $jour;
 }
 
 
