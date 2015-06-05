@@ -5,12 +5,17 @@
 // config
 //ini_set("display_errors", "1");
 //error_reporting(E_ALL);
-include 'error.php';
+//$file = __DIR__ . '/gitall.sh';
+//$f = fopen($file, "r");
+//$command = file_get_contents($file);
+//shell_exec($commande) || die('erreur avec le script shell');
+
 $file = __DIR__ . '/git-history.txt';
 
 // ouvrir le fichier texte
 $f = fopen($file, "r");
 $content = file_get_contents($file);
+
 //var_dump($file);
 //var_dump($content);
 //var_dump(count($lignes));
@@ -84,8 +89,12 @@ $rep .= '<hr/>' . $content;
 <head>
     <meta charset="UTF-8"></meta>
     <title>Git log all</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<?php echo $rep; ?>
+<div class="container">
+
+    <?php echo $rep; ?>
+</div>
 </body>
 </html>
