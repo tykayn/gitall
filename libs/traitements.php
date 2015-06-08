@@ -12,8 +12,8 @@ $command = 'cd ../ && git log --pretty=format:"%cd ' . $separator . ' %cn' . $se
 $hist = shell_exec($command);
 // ouvrir le fichier texte
 $ret = shell_exec($command . ' 2>&1') || die('erreur avec le script shell');
-// écrire le fichier histoire
-$bash_script = __DIR__ . '/gitall.sh';
+// écrire le fichier commande
+$bash_script = $output_folder . 'gitall.sh';
 file_put_contents($bash_script, $command);
 
 $file = __DIR__ . '/../git-history.txt';
@@ -132,7 +132,7 @@ foreach ($byDate as $d) {
         $display .= '<small class="row-fluid">semaine ' . $semaine . ' </small>';
     }
     if ($jour != $oldJour) {
-        $display .= '<h4>' . $joursFr[date('w', $timestamp) - 1] . ' ' . $jour . ' </h4>';
+        $display .= '<h4>' . $joursFr[date('w', $timestamp)] . ' ' . $jour . ' </h4>';
     }
     if ($heure != $oldHeure) {
         $display .= '<h5>' . $heure . 'h</h5>';
