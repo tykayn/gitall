@@ -6,7 +6,7 @@ if (isset($_POST['a'])) {
     $author = '--author="' . $_POST['a'] . '"';
 }
 
-$command = 'git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
+$command = 'cd ../ && git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //remplir le fichier bash
 $hist = shell_exec($command);
 // ouvrir le fichier texte
@@ -100,7 +100,7 @@ foreach ($byDate as $d) {
     if(!isset($joursDifferents[date('Y/m/d', $d['date'])])){
         $joursDifferents[date('Y/m/d', $d['date'])] = 1;
         // compter les jours de weekend
-        if( in_array($jsemaine , ['Sam','Dim'])){
+        if( $jsemaine && in_array($jsemaine , ['Sam','Dim'])){
             $joursWeekend++;
         }
 
