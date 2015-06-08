@@ -28,6 +28,11 @@ require('csv.php');
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
+            <div class="well">
+                <?php
+                echo $stats;
+                ?>
+            </div>
             <?php
             echo $rep;
             ?>

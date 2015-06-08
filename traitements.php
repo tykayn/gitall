@@ -98,8 +98,24 @@ $heure = date('H');
 $csv = 'Date,Auteur, commit,message
 ';
 $csv_html = $csv . '<br/>';
+$joursDifferents = [];
+$joursWeekend = 0;
 
 foreach ($byDate as $d) {
+    $jsemaine = $joursFr[date('w', $timestamp)-1];
+    // compter les jours différents.
+    if(!isset($joursDifferents[date('Y/m/d', $d['date'])])){
+        $joursDifferents[date('Y/m/d', $d['date'])] = 1;
+        // compter les jours de weekend
+        if( in_array($jsemaine , ['samedi','dimanche'])){
+            $joursWeekend++;
+        }
+
+    }
+
+
+
+
     $csv_part = date('Y/m/d H:i:s', $d['date']) . ',' . $d['auth'] . ',' . $d['sha'] . ',' . str_replace( ',' , ';', $d['msg']) . '
     ';
     $csv .= $csv_part;

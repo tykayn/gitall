@@ -1,5 +1,8 @@
 <?php
 
+$stats = ''. count($joursDifferents).' jours différents.
+<br/>
+dont '.$joursWeekend.' jours de weekend.';
 $html = '
 <html>
 <head>
@@ -18,6 +21,8 @@ $html = '
                     </h1>
                 </div>
                 <div class="panel-body">
+'. $stats .'
+<hr/>
                 ' . $rep . '
                 </div>
             </div>
