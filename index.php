@@ -9,12 +9,14 @@ $messages = '';
 $out = __DIR__ . '/output/index.html';
 require('traitements.php');
 require('rendu.php');
-require('csv.php');
+
 if( file_exists($out)){
     unlink($out);
     $messages .= '<br/> html régénéré';
 }
 file_put_contents($out, $html);
+
+require('csv.php');
 ?>
 <html>
 <head>
@@ -58,7 +60,7 @@ file_put_contents($out, $html);
 
             <hr/>
             <?php
-            echo $csv;
+            echo $csv_html;
             ?>
             <hr/>
             <h1>Fonctionnement</h1>
