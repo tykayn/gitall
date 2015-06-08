@@ -3,13 +3,24 @@
  * lister les commits de git
  */
 // config
+$separator = '/';
+$author = '--author=""';
 //ini_set("display_errors", "1");
 //error_reporting(E_ALL);
 $file = __DIR__ . '/gitall.sh';
 $f = fopen($file, "r");
-$command = file_get_contents($f);
-var_dump($command);
-shell_exec('git log --pretty=format:"%cd / %cn/ %h/ %s;" --full-history > git-history.txt');
+
+
+
+$command = 'git log --pretty=format:"%cd '.$separator.' %cn'.$separator.' %h'.$separator.' %s;" --full-history '.$author;
+//remplir le fichier bash
+shell_exec($command.' > gitall.sh');
+// ouvrir le fichier texte
+$f = fopen($file, "r");
+$content = file_get_contents($file);
+var_dump($content);
+$ret = shell_exec($command.' 2>&1');
+var_dump($ret);
 //die('erreur avec le script shell');
 
 $file = __DIR__ . '/git-history.txt';
@@ -20,9 +31,7 @@ $moisFr = [
     "01" => "Jan", "02" => "Fév", "03" => "Mar", "04" => "Avr", "05" => "Mai", "06" => "Juin", "07" => "Juillet",
     "08" => "Aoû", "09" => "Sep", "10" => "Oct", "11" => "Nov", "12" => "Déc"
 ];
-// ouvrir le fichier texte
-$f = fopen($file, "r");
-$content = file_get_contents($file);
+
 
 // couper par ligne
 $lignes = explode(';', $content);
@@ -128,7 +137,7 @@ echo '<br/>';
 //var_dump($datediff);
 // output html
 $rep = '';
-$rep .= 'Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits';
+$rep .= 'Projet commencé il y a ' . ceil($datediff) . '. ' . $countcommits . ' commits';
 $rep .= '<br/>' . $display;
 //$rep .= '<hr/>' . $content;
 ?>
@@ -141,14 +150,28 @@ $rep .= '<br/>' . $display;
 </head>
 <body>
 <div class="container">
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h1>Feuille de route</h1>
+    <div class="row-fluid">
+        <div class="col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1>Feuille de route</h1>
+                </div>
+                <div class="panel-body">
+                    <?php echo $rep; ?>
+                </div>
+            </div>
         </div>
-        <div class="panel-body">
-            <?php echo $rep; ?>
+        <div class="col-lg-6">
+            <h2>Options</h2>
+            <form action="/" method="get">
+                tri par auteur
+                <input type="text" name="a"/>
+                <input type="submit" value="mettre à jour"/>
+            </form>
         </div>
     </div>
+
+
 
     <h1>Fonctionnement</h1>
 
