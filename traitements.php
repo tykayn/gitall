@@ -107,7 +107,7 @@ foreach ($byDate as $d) {
     if(!isset($joursDifferents[date('Y/m/d', $d['date'])])){
         $joursDifferents[date('Y/m/d', $d['date'])] = 1;
         // compter les jours de weekend
-        if( in_array($jsemaine , ['samedi','dimanche'])){
+        if( in_array($jsemaine , ['Sam','Dim'])){
             $joursWeekend++;
         }
 
