@@ -1,1 +1,1 @@
-cd ../ && git log --pretty=format:"%cd / %cn/ %h/ %s;" --full-history 
+ git log --pretty=format:"%cd / %cn/ %h/ %s;" --full-history 

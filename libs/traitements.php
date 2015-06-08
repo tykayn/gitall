@@ -7,6 +7,7 @@ if (isset($_POST['a'])) {
 }
 
 $command = 'cd ../ && git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
+//$command = ' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //remplir le fichier bash
 $hist = shell_exec($command);
 // ouvrir le fichier texte
@@ -17,13 +18,13 @@ file_put_contents($bash_script, $command);
 
 $file = __DIR__ . '/../git-history.txt';
 $joursFr = [
-    "Lun",
-    "Mar",
-    "Mer",
-    "Jeu",
-    "Ven",
-    "Sam",
-    "Dim",
+    1 => "Lun",
+    2 => "Mar",
+    3 => "Mer",
+    4 => "Jeu",
+    5 => "Ven",
+    6 => "Sam",
+    0 => "Dim",
 ];
 $moisFr = [
     "01" => "Jan",
@@ -94,7 +95,7 @@ $csv_html = $csv . '<br/>';
 $joursDifferents = [];
 $joursWeekend = 0;
 foreach ($byDate as $d) {
-    $jsemaine = $joursFr[date('w', $timestamp) - 1];
+    $jsemaine = $joursFr[date('w', $timestamp)];
     // compter les jours différents.
     if (!isset($joursDifferents[date('Y/m/d', $d['date'])])) {
         $joursDifferents[date('Y/m/d', $d['date'])] = 1;
