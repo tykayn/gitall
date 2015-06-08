@@ -5,10 +5,15 @@
 // config
 $separator = '/';
 $end = ';';
+$messages = '';
 $out = __DIR__ . '/output/index.html';
 require('traitements.php');
 require('rendu.php');
-
+require('csv.php');
+if( file_exists($out)){
+    unlink($out);
+    $messages .= '<br/> html régénéré';
+}
 file_put_contents($out, $html);
 ?>
 <html>
@@ -34,17 +39,34 @@ file_put_contents($out, $html);
                     <input type="submit" value="mettre à jour"/>
                 </fieldset>
             </form>
-
+            <?php
+            if($messages){
+                echo'<div class="alert alert-info">'.$messages.'</div>';
+            }
+            ?>
             <div class="row">
-                sortie générée en html dans <a href="output/index.html">output/index.html</a>.
+                sorties générées:
+                <ul>
+                    <li>
+                        html dans <a href="output/index.html">output/index.html</a>.
+                    </li>
+                    <li>
+                        csv dans <a href="output/gitall.csv">output/gitall.csv</a>.
+                    </li>
+                </ul>
             </div>
+
+            <hr/>
+            <?php
+            echo $csv;
+            ?>
             <hr/>
             <h1>Fonctionnement</h1>
             cette page php permet de vous fournir un log complet par tranches de votre historique git.
             Clonez ce dépot dans le dossier de votre projet initialisé avec git. vous obtiendrez un dossier nommé
             <strong>gitall</strong>.
-            accédez y via votre navigateur web, et hop miracle voici un résumé html daté de tous les commits au rendu
-            configurable, exporté dans le dossier <strong>gitall/output</strong>.
+            accédez y via votre navigateur web, (par example via <a href="http://localhost/gitall/">http://localhost/gitall/</a> ) et hop miracle voici un résumé html daté de tous les commits au rendu
+            configurable, exporté en différents formats dans le dossier <strong>gitall/output</strong>.
             <hr/>
             <div class="well">
                 <a class="btn btn-primary" href="https://github.com/tykayn/gitall">

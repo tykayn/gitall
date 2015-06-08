@@ -95,7 +95,13 @@ $jour = date('d');
 $oldHeure = null;
 $heure = date('H');
 
+$csv = 'Date,Auteur, commit,message
+';
+
+
 foreach ($byDate as $d) {
+    $csv .= date('Y/m/d H:i:s', $d['date']).','.$d['auth'].','.$d['sha'].','.$d['msg'].'
+    ';
 
     $timestamp = $d['date'];
     //test de tranche différente
@@ -104,7 +110,6 @@ foreach ($byDate as $d) {
     $jour = date('d', $timestamp);
     $heure = date('H', $timestamp);
     $semaine = date('W', $timestamp);
-
     if ($an != $oldAn) {
         $display .= '<h2>' . $an . '</h2>';
     }
@@ -133,6 +138,8 @@ foreach ($byDate as $d) {
 }
 
 
+
+
 // calcul du début
 $firstDate = array_shift($byDate);
 $lastDate = array_pop($byDate);
@@ -146,12 +153,12 @@ $datediff = $datediff / $secPerDay;
 if ($datediff < 2) {
     $datediff = round($datediff * 24, 1) . ' h';
 } else {
-    $datediff = $datediff . ' jours';
+    $datediff =  round($datediff) . ' jours';
 }
 echo '<br/>';
 //var_dump($datediff);
 // output html
 $rep = '';
-$rep .= 'Projet commencé il y a ' . round($datediff) . '. ' . $countcommits . ' commits';
+$rep .= 'Projet commencé il y a ' .$datediff . '. ' . $countcommits . ' commits';
 $rep .= '<br/>' . $display;
 //$rep .= '<hr/>' . $content;
