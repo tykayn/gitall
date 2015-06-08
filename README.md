@@ -1,6 +1,7 @@
 # gitall
 create a dated history of your commits in a readble way by adding a php file in your project.
-
+Clone this into your git versionned project, navigate to the cloned folder via your browser, and bam! you know stuff about your logs.
+Caution! your folder needs execution rights to generate the output files of the logs.
 
 -----
 

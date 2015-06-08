@@ -6,7 +6,7 @@
 $separator = '/';
 $end = ';';
 $messages = '';
-
+$output_folder = __DIR__ . '/output/';
 require('libs/traitements.php');
 require('libs/rendu.php');
 require('libs/files.php');

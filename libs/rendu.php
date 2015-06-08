@@ -3,6 +3,7 @@
 $stats = ''. count($joursDifferents).' jours différents.
 <br/>
 dont '.$joursWeekend.' jours de weekend.';
+
 $html = '
 <html>
 <head>
