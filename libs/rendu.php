@@ -1,8 +1,11 @@
 <?php
-
-$stats = ''. count($joursDifferents).' jours différents.
+$nbJ = count($joursDifferents);
+$stats = ''. $nbJ.' jours différents.
 <br/>
 dont '.$joursWeekend.' jours de weekend.';
+
+$period = 'Période entre le premier et le dernier commit: jours';
+$density = 'Densité : %';
 
 $html = '
 <html>

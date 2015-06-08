@@ -93,23 +93,24 @@ $csv = 'Date,Auteur, commit,message
 $csv_html = $csv . '<br/>';
 $joursDifferents = [];
 $joursWeekend = 0;
-
 foreach ($byDate as $d) {
-    $jsemaine = $joursFr[date('w', $timestamp)-1];
+    $jsemaine = $joursFr[date('w', $timestamp) - 1];
     // compter les jours différents.
-    if(!isset($joursDifferents[date('Y/m/d', $d['date'])])){
+    if (!isset($joursDifferents[date('Y/m/d', $d['date'])])) {
         $joursDifferents[date('Y/m/d', $d['date'])] = 1;
         // compter les jours de weekend
-        if( $jsemaine && in_array($jsemaine , ['Sam','Dim'])){
+        if ($jsemaine && in_array($jsemaine, ['Sam', 'Dim'])) {
             $joursWeekend++;
         }
 
     }
 
 
-
-
-    $csv_part = date('Y/m/d H:i:s', $d['date']) . ',' . $d['auth'] . ',' . $d['sha'] . ',' . str_replace( ',' , ';', $d['msg']) . '
+    $csv_part = date('Y/m/d H:i:s', $d['date']) . ',' . $d['auth'] . ',' . $d['sha'] . ',' . str_replace(
+            ',',
+            ';',
+            $d['msg']
+        ) . '
     ';
     $csv .= $csv_part;
     $csv_html .= $csv_part . '<br/>';
@@ -159,14 +160,24 @@ $datediff = $ts1 - $ts2;
 $secPerDay = 3600 * 24;
 $datediff = $datediff / $secPerDay;
 if ($datediff < 2) {
+    if ($datediff === 0) {
+        $datediff = 1;
+    }
     $datediff = round($datediff * 24, 1) . ' h';
+
+    $section = round($countcommits / $datediff * 24, 2) . ' commits par heures.';
 } else {
+    if (!$datediff) {
+        $datediff = 1;
+    }
     $datediff = round($datediff) . ' jours';
+
+    $section = round($countcommits / $datediff, 2) . ' commits par jour.';
 }
 echo '<br/>';
 //var_dump($datediff);
 // output html
 $rep = '';
-$rep .= 'Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits';
+$rep .= 'Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits. ' . $section;
 $rep .= '<br/>' . $display;
 //$rep .= '<hr/>' . $content;
