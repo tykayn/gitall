@@ -6,17 +6,12 @@
 $separator = '/';
 $end = ';';
 $messages = '';
-$out = __DIR__ . '/output/index.html';
-require('traitements.php');
-require('rendu.php');
 
-if( file_exists($out)){
-    unlink($out);
-    $messages .= '<br/> html régénéré';
-}
-file_put_contents($out, $html);
+require('libs/traitements.php');
+require('libs/rendu.php');
+require('libs/files.php');
+require('libs/csv.php');
 
-require('csv.php');
 ?>
 <html>
 <head>

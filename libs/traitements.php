@@ -6,23 +6,16 @@ if (isset($_POST['a'])) {
     $author = '--author="' . $_POST['a'] . '"';
 }
 
-
 $command = 'git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //remplir le fichier bash
-//$lines = shell_exec($command.' > gitall.sh');
 $hist = shell_exec($command);
 // ouvrir le fichier texte
-//$file = __DIR__ . '/git-history.txt';
 $ret = shell_exec($command . ' 2>&1') || die('erreur avec le script shell');
 // écrire le fichier histoire
 $bash_script = __DIR__ . '/gitall.sh';
-//$f = fopen($file, "rw");
 file_put_contents($bash_script, $command);
 
-//$ret = shell_exec($command.' > git-history.txt;') || die('erreur avec git-history.txt');
-
-
-$file = __DIR__ . '/git-history.txt';
+$file = __DIR__ . '/../git-history.txt';
 $joursFr = [
     "Lun",
     "Mar",

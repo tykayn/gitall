@@ -1,6 +1,6 @@
 <?php
 // rendu en csv
-$out = __DIR__ . '/output/gitall.csv';
+$out = __DIR__ . '/../output/gitall.csv';
 if( file_exists($out)){
     unlink($out);
     $messages .= '<br/> gitall.csv régénéré';
