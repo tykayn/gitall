@@ -1,1 +1,1 @@
-git log --pretty=format:"%cd / %cn/ %h/ %s;" --full-history > git-history.txt
+git log --pretty=format:"%cd / %cn/ %h/ %s;" --full-history 

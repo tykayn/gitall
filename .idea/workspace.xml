@@ -28,22 +28,83 @@
       <file leaf-file-name="gitall.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gitall.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="77" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="192">
+              <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4351768" vertical-offset="4704" max-vertical-offset="7008">
-              <caret line="162" column="8" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+            <state vertical-scroll-proportion="-9.947369" vertical-offset="0" max-vertical-offset="1755">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="e#6#42#0#PHP" expanded="true" />
-                <marker date="1433782798504" expanded="true" signature="2503:2632" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traitements.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/traitements.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.083334" vertical-offset="4045" max-vertical-offset="5216">
+              <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+              <folding>
+                <marker date="1433789493421" expanded="true" signature="2706:2835" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rendu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rendu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.11111" vertical-offset="384" max-vertical-offset="2496">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+              <folding>
+                <marker date="1433790381333" expanded="true" signature="22:1556" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="29:207" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="214:1556" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="238:1359" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="238:1367" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="238:1534" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="238:1556" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="266:1357" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="297:605" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="343:590" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="387:478" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="412:430" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="412:455" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="519:571" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="636:1346" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="636:1357" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="678:1329" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="678:1346" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="722:949" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="747:926" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="839:900" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="990:992" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="990:1329" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="1026:1310" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="1375:1533" placeholder="..." />
+                <marker date="1433790381333" expanded="true" signature="1380:1411" placeholder="{...}" />
+                <marker date="1433790381333" expanded="true" signature="1420:1449" placeholder="{...}" />
+                <marker date="1433790381333" expanded="true" signature="1458:1487" placeholder="{...}" />
+                <marker date="1433790381333" expanded="true" signature="1496:1525" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.052459016" vertical-offset="0" max-vertical-offset="1220">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,8 +112,8 @@
       <file leaf-file-name="git-history.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git-history.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="480">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.96" vertical-offset="0" max-vertical-offset="480">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -64,19 +125,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/gitall.sh" />
+        <option value="$PROJECT_DIR$/traitements.php" />
+        <option value="$PROJECT_DIR$/rendu.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.5" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="80" />
-    <option name="width" value="2550" />
-    <option name="height" value="1388" />
+    <option name="y" value="-4" />
+    <option name="width" value="2560" />
+    <option name="height" value="1444" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -119,6 +182,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logAll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gitall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -126,9 +203,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/usr/bin/php5" />
+    <property name="recentsLimit" value="5" />
+    <property name="ignore_missing_gitignore" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/logAll/index.php">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -158,7 +247,14 @@
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
@@ -171,31 +267,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="80" width="2550" height="1388" extended-state="0" />
+    <frame x="0" y="-4" width="2560" height="1444" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22106987" sideWeight="0.50416666" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22204214" sideWeight="0.49583334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22114609" sideWeight="0.49583334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22106987" sideWeight="0.50416666" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33958334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17604166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -235,7 +331,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#42#0#PHP" expanded="true" />
-            <marker date="1433782798504" expanded="true" signature="2503:2632" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -262,7 +357,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#42#0#PHP" expanded="true" />
-            <marker date="1433782798504" expanded="true" signature="2503:2632" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -277,28 +371,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/git-history.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.96" vertical-offset="0" max-vertical-offset="480">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gitall.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="77" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="192">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traitements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.083334" vertical-offset="4045" max-vertical-offset="5216">
+          <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+          <folding>
+            <marker date="1433789493421" expanded="true" signature="2706:2835" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rendu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.11111" vertical-offset="384" max-vertical-offset="2496">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <marker date="1433790381333" expanded="true" signature="22:1556" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="29:207" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="214:1556" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="238:1359" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="238:1367" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="238:1534" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="238:1556" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="266:1357" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="297:605" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="343:590" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="387:478" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="412:430" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="412:455" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="519:571" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="636:1346" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="636:1357" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="678:1329" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="678:1346" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="722:949" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="747:926" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="839:900" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="990:992" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="990:1329" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="1026:1310" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="1375:1533" placeholder="..." />
+            <marker date="1433790381333" expanded="true" signature="1380:1411" placeholder="{...}" />
+            <marker date="1433790381333" expanded="true" signature="1420:1449" placeholder="{...}" />
+            <marker date="1433790381333" expanded="true" signature="1458:1487" placeholder="{...}" />
+            <marker date="1433790381333" expanded="true" signature="1496:1525" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4351768" vertical-offset="4704" max-vertical-offset="7008">
-          <caret line="162" column="8" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+        <state vertical-scroll-proportion="-9.947369" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="e#6#42#0#PHP" expanded="true" />
-            <marker date="1433782798504" expanded="true" signature="2503:2632" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.052459016" vertical-offset="0" max-vertical-offset="1220">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
