@@ -5,8 +5,12 @@ $content = '';
 if (isset($_POST['a'])) {
     $author = '--author="' . $_POST['a'] . '"';
 }
-
-$command = 'cd ../ && git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
+define('MODE_PROD' , '0');
+$changeDir = '';
+if(MODE_PROD){
+    $changeDir = 'cd ../ &&';
+}
+$command = $changeDir.' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //$command = ' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //remplir le fichier bash
 $hist = shell_exec($command);
@@ -133,6 +137,7 @@ foreach ($byDate as $d) {
     }
     if ($jour != $oldJour) {
         $display .= '<h4>' . $joursFr[date('w', $timestamp)] . ' ' . $jour . ' </h4>';
+        // compter les commits par jour
     }
     if ($heure != $oldHeure) {
         $display .= '<h5>' . $heure . 'h</h5>';
