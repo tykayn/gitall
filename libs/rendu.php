@@ -13,6 +13,7 @@ $html = '
     <meta charset="UTF-8"></meta>
     <title>Git log all</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="container">
@@ -26,6 +27,9 @@ $html = '
                 </div>
                 <div class="panel-body">
 '. $stats .'
+<hr/>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+'.$timeTable.'
 <hr/>
                 ' . $rep . '
                 </div>
@@ -75,6 +79,30 @@ h2 {
     margin-left: 4em;
     }
 </style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.4.1/canvas.min.js"></script>
+<script type="text/javascript">
+		window.onload = function () {
+			var chart = new CanvasJS.Chart("chartContainer",
+						{
+							zoomEnabled: true,
+
+							title:{
+								text: "Chart With Date-Time Stamps Inputs"
+							},
+
+							data: [
+								{
+									type: "column",
+									xValueType: "dateTime",
+									dataPoints: '.$timeTable.'
+								}
+							]
+						});
+
+			chart.render();
+		}
+	</script>
 </body>
 </html>
 <?php

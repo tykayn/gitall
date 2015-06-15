@@ -5,12 +5,12 @@ $content = '';
 if (isset($_POST['a'])) {
     $author = '--author="' . $_POST['a'] . '"';
 }
-define('MODE_PROD' , '0');
+define('MODE_PROD', '0');
 $changeDir = '';
-if(MODE_PROD){
+if (MODE_PROD) {
     $changeDir = 'cd ../ &&';
 }
-$command = $changeDir.' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
+$command = $changeDir . ' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //$command = ' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //remplir le fichier bash
 $hist = shell_exec($command);
@@ -98,6 +98,8 @@ $csv = 'Date,Auteur, commit,message
 $csv_html = $csv . '<br/>';
 $joursDifferents = [];
 $joursWeekend = 0;
+$commitsToday = 0;
+$commitsSurJours = [];
 foreach ($byDate as $d) {
     $jsemaine = $joursFr[date('w', $timestamp)];
     // compter les jours différents.
@@ -120,6 +122,9 @@ foreach ($byDate as $d) {
     $csv .= $csv_part;
     $csv_html .= $csv_part . '<br/>';
     $timestamp = $d['date'];
+    if(!$oldtimestamp){
+        $oldtimestamp = $timestamp;
+        }
     //test de tranche différente
     $an = date('Y', $timestamp);
     $mois = date('m', $timestamp);
@@ -138,10 +143,18 @@ foreach ($byDate as $d) {
     if ($jour != $oldJour) {
         $display .= '<h4>' . $joursFr[date('w', $timestamp)] . ' ' . $jour . ' </h4>';
         // compter les commits par jour
+
+//            $commitsSurJours[] = [ 'x' => 'new Date('.date('Y' , $oldtimestamp).', '.date('m' , $oldtimestamp).', '.date('d' , $oldtimestamp).')' , 'y'=> $commitsToday];
+//            $commitsSurJours[] = [ 'x' => date('Y-m-d' , $oldtimestamp) , 'y'=> $commitsToday];
+            $commitsSurJours[] = [ 'x' =>  $oldtimestamp , 'y'=> $commitsToday];
+
+
     }
+    $commitsToday++;
     if ($heure != $oldHeure) {
         $display .= '<h5>' . $heure . 'h</h5>';
     }
+
 
     $display .= '<div class="row">
 <div class="col-lg-2 text-right">' . date('i:s', $timestamp) . '</div>
@@ -152,6 +165,7 @@ foreach ($byDate as $d) {
     $oldSemaine = $semaine;
     $oldHeure = $heure;
     $oldJour = $jour;
+    $oldtimestamp = $timestamp;
 }
 
 
@@ -187,3 +201,9 @@ $rep = '';
 $rep .= 'Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits. ' . $section;
 $rep .= '<br/>' . $display;
 //$rep .= '<hr/>' . $content;
+
+//$timeTable = json_encode([['x' => 213112313313132, 'y' => 2], ['x' => 213112315813132, 'y' => 5]]);
+$timeTable = json_encode($commitsSurJours);
+
+
+// la suite se passe dans rendu.php
