@@ -166,14 +166,14 @@ foreach ($byDate as $d) {
     /**
      * classes css selon l'heure du commit
      */
-    $heureCommit = date('H', $timestamp);
+    $heureCommit = date('G', $timestamp);
     $classes_css ='';
     if($heureCommit < $trop_tot){
         $classes_css .=' trop-tot';
         $dayPeriod['trop-tot']++;
     }
     elseif($heureCommit > $trop_tot && $heureCommit < $trop_tard ){
-        $classes_css .=' trop-tard';
+        $classes_css .=' normal';
         $dayPeriod['normal']++;
     }
     elseif($heureCommit > $trop_tard){
@@ -182,7 +182,7 @@ foreach ($byDate as $d) {
     }
     $display .= '<div class="row '.$classes_css.'">
 <div class="col-lg-2 text-right">' . date('i:s', $timestamp) . '</div>
- <div class="col-lg-10">  ' . $d['msg'] . '</div>
+ <div class="col-lg-10"> ' . $d['msg'] . '</div>
  </div>';
     $oldAn = $an;
     $oldMois = $mois;
