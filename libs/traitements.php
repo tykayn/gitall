@@ -100,6 +100,12 @@ $joursDifferents = [];
 $joursWeekend = 0;
 $commitsToday = 0;
 $commitsSurJours = [];
+$dayPeriod = [ 
+    'trop-tot' => 0, 
+    'normal' => 0,
+    'trop-tard' => 0,
+];
+$i = 1;
 foreach ($byDate as $d) {
     $jsemaine = $joursFr[date('w', $timestamp)];
     // compter les jours différents.
@@ -141,22 +147,40 @@ foreach ($byDate as $d) {
         $display .= '<small class="row-fluid">semaine ' . $semaine . ' </small>';
     }
     if ($jour != $oldJour) {
-        $display .= '<h4>' . $joursFr[date('w', $timestamp)] . ' ' . $jour . ' </h4>';
+        $display .= '<h4>' . $joursFr[date('w', $timestamp)] . ' ' . $jour . '
+        <span class="pull-right btn btn-default">'.$i.'e jour</span>
+        </h4>';
         // compter les commits par jour
 
 //            $commitsSurJours[] = [ 'x' => 'new Date('.date('Y' , $oldtimestamp).', '.date('m' , $oldtimestamp).', '.date('d' , $oldtimestamp).')' , 'y'=> $commitsToday];
 //            $commitsSurJours[] = [ 'x' => date('Y-m-d' , $oldtimestamp) , 'y'=> $commitsToday];
             $commitsSurJours[] = [ 'x' =>  $oldtimestamp , 'y'=> $commitsToday];
 
-
+        $i++;
     }
     $commitsToday++;
     if ($heure != $oldHeure) {
         $display .= '<h5>' . $heure . 'h</h5>';
     }
 
-
-    $display .= '<div class="row">
+    /**
+     * classes css selon l'heure du commit
+     */
+    $heureCommit = date('H', $timestamp);
+    $classes_css ='';
+    if($heureCommit < $trop_tot){
+        $classes_css .=' trop-tot';
+        $dayPeriod['trop-tot']++;
+    }
+    elseif($heureCommit > $trop_tot && $heureCommit < $trop_tard ){
+        $classes_css .=' trop-tard';
+        $dayPeriod['normal']++;
+    }
+    elseif($heureCommit > $trop_tard){
+        $classes_css .=' trop-tard';
+        $dayPeriod['trop-tard']++;
+    }
+    $display .= '<div class="row '.$classes_css.'">
 <div class="col-lg-2 text-right">' . date('i:s', $timestamp) . '</div>
  <div class="col-lg-10">  ' . $d['msg'] . '</div>
  </div>';
@@ -166,6 +190,7 @@ foreach ($byDate as $d) {
     $oldHeure = $heure;
     $oldJour = $jour;
     $oldtimestamp = $timestamp;
+
 }
 
 
@@ -198,9 +223,13 @@ echo '<br/>';
 //var_dump($datediff);
 // output html
 $rep = '';
-$rep .= 'Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits. ' . $section;
+$rep .= '<h2>Répartition journalière</h2>  ';
+foreach ($dayPeriod as $k => $v) {
+    $rep .= '<br/>  '.$k .' : ' .$v;
+}
+
+$rep .= '<br/>Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits. ' . $section;
 $rep .= '<br/>' . $display;
-//$rep .= '<hr/>' . $content;
 
 //$timeTable = json_encode([['x' => 213112313313132, 'y' => 2], ['x' => 213112315813132, 'y' => 5]]);
 $timeTable = json_encode($commitsSurJours);

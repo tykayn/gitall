@@ -24,6 +24,8 @@ vous obtiendrez un dossier nommé __gitall__.
 dedans, le fichier index.php, une fois éxécuté va s'appuyer sur un log git et générer une feuille de route de votre projet dans plusieurs formats.
 Actuellement sont supportés le HTML et le csv.
 
+l'index.php permet de choisir les options de génération des compte rendus.
+
 le HTML montre:
     * le nombre de jours de weekend où vous avez commité
     * le nombre de jours entre le premier et le dernier commit
@@ -33,11 +35,11 @@ le HTML montre:
 le CSV totalise moins d'infos et est exportable dans n'importe quel tableur.
 
 ## TODO
-    ### rendus:
-    * ajouts et suppressions par commit
-    * volume de code réalisé
-    * graphique des heures où l'on commit le plus
-    * coloration des commits effectués en dehors d'heures de bureau
-    ### infos d'efficacité
-    * savoir quels sont les fichiers les plus commités
-    * savoir quels sont les fichiers présentant le plus de difficultés selon si on retouche souvent les mêmes lignes.
+### rendus:
+* ajouts et suppressions par commit
+* volume de code réalisé
+* graphique des heures où l'on commit le plus
+* coloration des commits effectués en dehors d'heures de bureau
+### infos d'efficacité
+* savoir quels sont les fichiers les plus commités
+* savoir quels sont les fichiers présentant le plus de difficultés selon si on retouche souvent les mêmes lignes.
