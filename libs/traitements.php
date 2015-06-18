@@ -100,6 +100,8 @@ $joursDifferents = [];
 $joursWeekend = 0;
 $commitsToday = 0;
 $commitsSurJours = [];
+$byHour = [];
+$byJour = [];
 $dayPeriod = [ 
     'trop-tot' => 0, 
     'normal' => 0,
@@ -147,7 +149,17 @@ foreach ($byDate as $d) {
     $an = date('Y', $timestamp);
     $mois = date('m', $timestamp);
     $jour = date('d', $timestamp);
+    $jourFrancais = $joursFr[date('w', $timestamp)];
+    if(!isset($byJour[$jourFrancais])){
+        $byJour[$jourFrancais] = 0;
+    }
+    $byJour[$jourFrancais]++;
+
     $heure = date('H', $timestamp);
+    if(!isset($byHeure[$heure])){
+        $byHeure[$heure] = 0;
+    }
+    $byHeure[$heure]++;
     $semaine = date('W', $timestamp);
     if ($an != $oldAn) {
         $display .= '<h2>' . $an . '</h2>';
@@ -159,7 +171,7 @@ foreach ($byDate as $d) {
         $display .= '<small class="row-fluid">semaine ' . $semaine . ' </small>';
     }
     if ($jour != $oldJour) {
-        $display .= '<h4>' . $joursFr[date('w', $timestamp)] . ' ' . $jour . '
+        $display .= '<h4>' . $jourFrancais . ' ' . $jour . '
         <span class="pull-right btn btn-default">'.$jours.'e jour</span>
         </h4>';
         // compter les commits par jour
@@ -239,6 +251,16 @@ $rep = '';
 $rep .= '<h2>Répartition journalière</h2>  ';
 foreach ($dayPeriod as $k => $v) {
     $rep .= '<br/>  '.$k .' : ' .$v;
+}
+$rep .= '<h2>jours</h2>';
+ksort($byJour);
+foreach ($byJour as $k => $v) {
+    $rep .= '<br/>  '.$k .' : ' .$v;
+}
+$rep .= '<h2>heures</h2>';
+ksort($byHeure);
+foreach ($byHeure as $k => $v) {
+    $rep .= '<br/>  '.$k .'h : ' .$v;
 }
 
 $rep .= '<br/>Projet commencé il y a ' . $datediff . '. ' . $countcommits . ' commits. ' . $section;

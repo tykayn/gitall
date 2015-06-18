@@ -31,6 +31,7 @@ le HTML montre:
     * le nombre de jours entre le premier et le dernier commit
     * un graphique de fréquence de commit (avec canvas.js)
     * une répartition journalière de vos commits.
+    * coloration des commits effectués en dehors d'heures de bureau
 
 le CSV totalise moins d'infos et est exportable dans n'importe quel tableur.
 
@@ -39,7 +40,6 @@ le CSV totalise moins d'infos et est exportable dans n'importe quel tableur.
 * ajouts et suppressions par commit
 * volume de code réalisé
 * graphique des heures où l'on commit le plus
-* coloration des commits effectués en dehors d'heures de bureau
 ### infos d'efficacité
 * savoir quels sont les fichiers les plus commités
 * savoir quels sont les fichiers présentant le plus de difficultés selon si on retouche souvent les mêmes lignes.
