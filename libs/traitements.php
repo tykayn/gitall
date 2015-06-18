@@ -106,6 +106,18 @@ $dayPeriod = [
     'trop-tard' => 0,
 ];
 $i = 1;
+$jours = 0;
+// compter les jours
+foreach ($byDate as $d) {
+
+    $timestamp = $d['date'];
+    $jour = date('d', $timestamp);
+    if ($jour != $oldJour) {
+        $jours++;
+    }
+    $oldJour = $jour;
+}
+$Comptjours = $jours;
 foreach ($byDate as $d) {
     $jsemaine = $joursFr[date('w', $timestamp)];
     // compter les jours différents.
@@ -148,7 +160,7 @@ foreach ($byDate as $d) {
     }
     if ($jour != $oldJour) {
         $display .= '<h4>' . $joursFr[date('w', $timestamp)] . ' ' . $jour . '
-        <span class="pull-right btn btn-default">'.$i.'e jour</span>
+        <span class="pull-right btn btn-default">'.$jours.'e jour</span>
         </h4>';
         // compter les commits par jour
 
@@ -157,6 +169,7 @@ foreach ($byDate as $d) {
             $commitsSurJours[] = [ 'x' =>  $oldtimestamp , 'y'=> $commitsToday];
 
         $i++;
+        $jours--;
     }
     $commitsToday++;
     if ($heure != $oldHeure) {

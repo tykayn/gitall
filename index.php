@@ -34,7 +34,7 @@ require('libs/csv.php');
         <div class="col-lg-6">
             <form action="/" method="get">
                 <fieldset>
-                    <h2>Options</h2>
+                    <h2><i class="fa fa-gear"></i> Options</h2>
                     tri par auteur
                     <input type="text" name="a"/>
                     <input type="submit" value="mettre à jour"/>
@@ -56,13 +56,8 @@ require('libs/csv.php');
                     </li>
                 </ul>
             </div>
-
             <hr/>
-            <?php
-            echo $csv_html;
-            ?>
-            <hr/>
-            <h1>Fonctionnement</h1>
+            <h1><i class="fa fa-info"></i> Fonctionnement</h1>
             cette page php permet de vous fournir un log complet par tranches de votre historique git.
             Clonez ce dépot dans le dossier de votre projet initialisé avec git. vous obtiendrez un dossier nommé
             <strong>gitall</strong>.
