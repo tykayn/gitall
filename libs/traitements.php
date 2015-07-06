@@ -10,6 +10,9 @@ $changeDir = '';
 if (MODE_PROD) {
     $changeDir = 'cd ../ &&';
 }
+// pour avoir des stats sur les fichiers et les ajouts , suppressions
+// git log --pretty=format:";%cd / %cr / %cn/ %h/ %s" --numstat
+
 $command = $changeDir . ' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //$command = ' git log --pretty=format:"%cd ' . $separator . ' %cn' . $separator . ' %h' . $separator . ' %s' . $end . '" --full-history ' . $author;
 //remplir le fichier bash
